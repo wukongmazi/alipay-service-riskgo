@@ -1,37 +1,126 @@
 # 支付宝服务商处理支付交易投诉管理系统
 
+https://mp.weixin.qq.com/s/9e6ErVzuo9o8uEN9Qe_s8A
+
+![Image text](https://pica.zhimg.com/70/v2-9874307866136e5c71fc3d7d12bcbbbb_1440w.png)
+
 #### 介绍
+
 可以帮助服务商更好地处理消费者投诉，提升用户满意度，提高处理效率。支持多服务商，不需要频繁扫码登录支付宝商家平台去处理。
 
-#### 软件架构
-软件架构说明
+## 1、问题背景
 
+玩过支付宝生态的，或许就有这种感受，如果收到投诉单，不会通知到手机端，只会在支付宝商家后台-账号中心-安全中心-消费者投诉-支付交易投诉那里显示。那你能一直盯着电脑看吗？可能当你有空打开电脑登录查看的时候，已经积累了好多超时未处理的投诉单。
 
-#### 安装教程
+![Image text](https://pic3.zhimg.com/80/v2-b7fddec2b24bd168bb36803700bd17da_720w.png)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+一旦处理不及时，超时什么的，就会受到相应的处罚。为了更高效地处理用户投诉，为用户提供更好的售后服务体验。所以还是搞个系统来处理，起码会比较及时的处理投诉单。话不多说，来看一下这个系统。
 
-#### 使用说明
+![Image text](https://pic4.zhimg.com/80/v2-c15c92df1fd63cc4d870b009e120f183_720w.png)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+可以帮助服务商更好地处理消费者投诉，提升用户满意度，提高处理效率。支持多服务商，不需要频繁扫码登录支付宝商家平台去处理。
 
-#### 参与贡献
+## 2、服务商管理
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+这里录入的是服务商第三方应用相关信息，可以新增多个第三方应用，管理起来也不麻烦，挺方便。
 
+![Image text](https://pic1.zhimg.com/80/v2-dbcd5f1936ca4c1d584df2d19c3b0862_720w.png)
 
-#### 特技
+点击商户授权，在弹窗中点确定。
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+![Image text](https://pic1.zhimg.com/80/v2-9f758120223f70d337b6eca40b6ceb0e_720w.png)
+
+跳转到授权页面，选择应用完成授权。
+
+![Image text](https://picx.zhimg.com/80/v2-907feb5862cc4d537642bf9463e7c4a5_720w.png)
+
+要准备服务商商户名称、服务商应用id、如果加签方式选择密钥方式，则需要上传服务商应用私钥证书、服务商支付宝公钥证书。
+
+![Image text](https://picx.zhimg.com/80/v2-f5a86a4cf2b9b651f1c4694fbd05a203_720w.png)
+
+如果加签方式选择证书方式，则需要上传服务商应用私钥证书、服务商支付宝公钥证书、服务商应用公钥证书路径、服务商支付宝根证书路径，这些参数信息到支付宝开放平台后台，第三方应用获取。
+
+如果开启了自动退款，且授权商户也开启了自动退款，系统收到投诉单后，也会自动退款，实测正常情况下退款成功后投诉单状态自动变成处理完成。
+
+如果将状态改为禁用，则系统不会收到投诉单通知。
+
+![Image text](https://pica.zhimg.com/80/v2-e0a6530073852188c885473d09118cc4_720w.png)
+
+## 3、授权商户管理
+
+商户授权成功后会自动跳转到授权商户管理页面。
+
+![Image text](https://pic1.zhimg.com/80/v2-940a4e59490f9e8f7ae04b54f2f293dc_720w.png)
+
+点击修改，可以修改商户公司名称和商户名称。
+
+如果开启了自动退款，且所属服务商第三方应用也开启了自动退款，系统收到投诉单后，也会自动退款，实测正常情况下退款成功后投诉单状态自动变成处理完成。
+
+如果将状态改为禁用，则系统不会收到该商户投诉单通知。
+
+![Image text](https://picx.zhimg.com/80/v2-63edc8b1026f7724cd63e71409c0b879_720w.png)
+
+## 4、通知管理
+
+这个配置的是消息通知参数，如果授权商家订单被投诉了，系统收到投诉单时，会通知接收人。有三种通知渠道，邮箱通知、公众号通知、短信通知，可同时设置。
+
+![Image text](https://picx.zhimg.com/80/v2-70122662cc6ce1565a997d079c31b60b_720w.png)
+
+### 4.1、邮箱通知
+
+需要设置发送人邮箱(必须是网易云163邮箱)、发送人邮箱授权码、接收人邮箱。这些需要到网易云163邮箱后台获取。
+
+![Image text](https://pic2.zhimg.com/80/v2-6eb664fb5944681b5755fcb132cd9b31_720w.png)
+
+### 4.2、公众号通知
+
+需要设置公众号appId、公众号secret、公众号模板消息id、接收人公众号openId。这些需要到公众号后台获取。
+
+![Image text](https://pic2.zhimg.com/80/v2-12c554c9dd6e746384ddd0cdd1668b21_720w.png)
+
+### 4.3、短信通知
+
+需要设置腾讯云短信secretId、腾讯云短信secretKey、腾讯云短信模板id、腾讯云短信appId、腾讯云短信签名、接收人手机号。这些需要到腾讯云后台获取。
+
+![Image text](https://pic2.zhimg.com/80/v2-3617ea614cab46f578f86bd4e16266d1_720w.png)
+
+## 5、投诉处理
+
+可以直接查看详情、提交退款、处理投诉。
+
+![Image text](https://picx.zhimg.com/80/v2-cc84e5c26f01f07c5cd29331004277f1_720w.png)
+
+### 5.1、投诉单详情
+
+可以查看投诉单详情。
+
+![Image text](https://pic4.zhimg.com/80/v2-34544eb1c4fbb0f4c76cdca2cccaf227_720w.png)
+
+### 5.2、提交退款
+
+如果是正常普通的收单产品，没有特殊情况下可以手动退款，输入退款金额，附上退款原因。这样就不用到商户号后台去操作退款了。
+
+![Image text](https://pic4.zhimg.com/80/v2-1c105bd13b9c4e4df55aa65245c649fb_720w.png)
+
+### 5.3、处理投诉
+
+可以直接在后台处理投诉。在与用户充分协商沟通，确认投诉问题已达成和解后，根据实际处理情况完结该笔投诉。而不需要频繁扫码登录支付宝商家平台去处理。
+
+![Image text](https://pica.zhimg.com/80/v2-8aab9f23dd2ce0e164330ca750e9648a_720w.png)
+
+![Image text](https://pic3.zhimg.com/80/v2-21efa251e71c2cdede155770e202eed4_720w.png)
+
+![Image text](https://pica.zhimg.com/80/v2-f718ce0ce5418b9973d94208fb6b1f3a_720w.png)
+
+总结来说，这个工具可以管理多个支付宝服务商第三方应用，及时收到授权商户支付宝支付交易投诉的信息，然后通知预先设置好的接收人。
+
+如果预先设置了自动退款，则在接收到投诉的同时可以直接退款并将该投诉单处理完成。
+
+可以直接在后台处理投诉，而不需要频繁扫码登录支付宝商家平台去处理。
+
+![Image text](https://pic1.zhimg.com/80/v2-fc64ca6384d51bffb28eb6e100c1185c_720w.png)
+
+山水有相逢，来日皆可期，谢谢阅读，我们再会
+
+我手中的金箍棒，上能通天，下能探海
+
